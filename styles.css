@@ -1,4 +1,3 @@
-/* Modern Anime & Manga Aesthetic Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -8,16 +7,12 @@
 }
 
 body {
-  /* Custom cursor (optional) */
   cursor: url('custom-cursor.png'), auto;
   
-  /* Font & color */
   font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
   
-  /* Silhouette background settings */
-  /* Replace 'silhouette-bg.jpg' with your actual image file name or path */
   background: #121212 url('silhouette-bg.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -82,9 +77,7 @@ button:hover {
   
   .card:hover {
     transform: scale(1.08);
-    /* Adjusting transparency for background (e.g., increasing opacity to 0.15) */
     background: rgba(0, 0, 0, 0.6);
-    /* Adjusting box-shadow with lower opacity for a softer shadow effect */
     box-shadow: 0 8px 16px rgba(255, 71, 87, 0.8);
   }
   
@@ -115,11 +108,10 @@ footer {
   opacity: 0.8;
 }
 
-/* Responsive Video Wrapper for YouTube iframe */
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
@@ -133,7 +125,6 @@ footer {
   border: 0;
 }
 
-/* Modern Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -147,7 +138,6 @@ footer {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Enlarged Modal Popup for Trailer and Manga */
 .modal-content {
   background: #1c1c1c;
   padding: 24px;
@@ -161,7 +151,6 @@ footer {
   cursor: url('custom-cursor.png'), auto;
 }
 
-/* Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -190,14 +179,12 @@ footer {
   color: #ffdd44;
 }
 
-/* Manga Synopsis Scrollable Container */
 #manga-synopsis {
-  max-height: 200px; /* Adjust as needed */
+  max-height: 200px;
   overflow-y: auto;
-  padding-right: 8px; /* Optional for scrollbar space */
+  padding-right: 8px;
 }
 
-/* Custom Scrollbar Styling for Manga Synopsis */
 #manga-synopsis::-webkit-scrollbar {
   width: 8px;
 }
@@ -213,7 +200,6 @@ footer {
   border: 2px solid #1c1c1c; 
 }
 
-/* For Firefox */
 #manga-synopsis {
   scrollbar-width: thin;
   scrollbar-color: #ff4757 #1c1c1c;
