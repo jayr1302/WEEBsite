@@ -1,7 +1,5 @@
-// Base URL for the Jikan API
 const BASE_URL = 'https://api.jikan.moe/v4';
 
-// Elements
 const searchInput = document.getElementById('search-input');
 const typeSelect = document.getElementById('type-select');
 const searchBtn = document.getElementById('search-btn');
@@ -9,7 +7,6 @@ const resultsContainer = document.getElementById('results');
 const topRatedBtn = document.getElementById('top-rated-btn');
 const topRatedContainer = document.getElementById('top-rated');
 
-// Function to create a card for each result
 function createCard(item, type) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -48,7 +45,6 @@ function createCard(item, type) {
   return card;
 }
 
-// Search function to query anime or manga based on input
 async function performSearch() {
   const query = searchInput.value.trim();
   const type = typeSelect.value;
@@ -78,7 +74,6 @@ async function performSearch() {
   }
 }
 
-// Load top-rated anime using the API's top endpoint
 async function loadTopRated() {
   topRatedContainer.innerHTML = 'Loading...';
 
@@ -100,7 +95,6 @@ async function loadTopRated() {
   }
 }
 
-// Function to update the trailer in the modal responsively
 function updateTrailer(trailerId) {
   const videoContainer = document.getElementById('video-container');
   videoContainer.innerHTML = `
@@ -113,7 +107,6 @@ function updateTrailer(trailerId) {
   `;
 }
 
-// Modified modal function to open and display a YouTube trailer
 function openModalWithTrailer(trailerId) {
   const modal = document.getElementById('modal');
   if (modal.style.display === 'flex') {
@@ -124,7 +117,6 @@ function openModalWithTrailer(trailerId) {
   }
 }
 
-// Modal function to open and display manga details centered
 function openMangaModal(manga) {
   const mangaModal = document.getElementById('manga-modal');
   document.getElementById('manga-title').textContent = manga.title;
@@ -142,7 +134,6 @@ function openMangaModal(manga) {
   modalContent.style.position = 'relative';
 }
 
-// Close modal events
 document.getElementById('close-modal').addEventListener('click', () => {
   const modal = document.getElementById('modal');
   modal.style.display = 'none';
