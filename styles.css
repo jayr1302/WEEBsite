@@ -1,0 +1,220 @@
+/* Modern Anime & Manga Aesthetic Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Custom cursor (optional) */
+  cursor: url('custom-cursor.png'), auto;
+  
+  /* Font & color */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  
+  /* Silhouette background settings */
+  /* Replace 'silhouette-bg.jpg' with your actual image file name or path */
+  background: #121212 url('silhouette-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  background: rgba(15, 15, 25, 0.95);
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+#search-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+input, select, button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+button {
+  background: #ff4757;
+  color: white;
+  cursor: url('custom-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(255, 71, 87, 0.3);
+}
+
+button:hover {
+  background: #e84118;
+  box-shadow: 0 6px 10px rgba(255, 71, 87, 0.5);
+}
+
+#results, #top-rated {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    position: relative;
+    cursor: url('custom-cursor.png'), pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.08);
+    /* Adjusting transparency for background (e.g., increasing opacity to 0.15) */
+    background: rgba(0, 0, 0, 0.6);
+    /* Adjusting box-shadow with lower opacity for a softer shadow effect */
+    box-shadow: 0 8px 16px rgba(255, 71, 87, 0.8);
+  }
+  
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(15, 15, 25, 0.95);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive Video Wrapper for YouTube iframe */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Modern Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Enlarged Modal Popup for Trailer and Manga */
+.modal-content {
+  background: #1c1c1c;
+  padding: 24px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+  position: relative;
+  cursor: url('custom-cursor.png'), auto;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  cursor: url('custom-cursor.png'), pointer;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.close:hover {
+  color: #ff4757;
+}
+
+#manga-link {
+  display: block;
+  margin-top: 12px;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#manga-link:hover {
+  text-decoration: underline;
+  color: #ffdd44;
+}
+
+/* Manga Synopsis Scrollable Container */
+#manga-synopsis {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto;
+  padding-right: 8px; /* Optional for scrollbar space */
+}
+
+/* Custom Scrollbar Styling for Manga Synopsis */
+#manga-synopsis::-webkit-scrollbar {
+  width: 8px;
+}
+
+#manga-synopsis::-webkit-scrollbar-track {
+  background: #1c1c1c; 
+  border-radius: 10px;
+}
+
+#manga-synopsis::-webkit-scrollbar-thumb {
+  background: #ff4757;
+  border-radius: 10px;
+  border: 2px solid #1c1c1c; 
+}
+
+/* For Firefox */
+#manga-synopsis {
+  scrollbar-width: thin;
+  scrollbar-color: #ff4757 #1c1c1c;
+}

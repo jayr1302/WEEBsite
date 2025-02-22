@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anime & Manga Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Anime & Manga Search</h1>
+  </header>
+
+  <main>
+    <section id="search-section">
+      <input type="text" id="search-input" placeholder="Search for anime or manga..." />
+      <select id="type-select">
+        <option value="anime">Anime</option>
+        <option value="manga">Manga</option>
+      </select>
+      <button id="search-btn">Search</button>
+    </section>
+
+    <section id="results-section">
+      <h2>Results</h2>
+      <div id="results"></div>
+    </section>
+
+    <section id="top-rated-section">
+      <h2>Top Rated Anime</h2>
+      <button id="top-rated-btn">Load Top Rated</button>
+      <div id="top-rated"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built using Jikan API (Unofficial MyAnimeList API)</p>
+  </footer>
+
+  <!-- Modal for Anime Trailer -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <div id="video-container"></div>
+    </div>
+  </div>
+
+  <!-- Modal for Manga Overview -->
+  <div id="manga-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-manga-modal" class="close">&times;</span>
+      <h2 id="manga-title"></h2>
+      <img id="manga-image" src="" alt="Manga Cover" />
+      <p id="manga-synopsis"></p>
+      <p><strong>Author:</strong> <span id="manga-author"></span></p>
+      <p><strong>Status:</strong> <span id="manga-status"></span></p>
+      <p><strong>Genres:</strong> <span id="manga-genres"></span></p>
+      <a id="manga-link" href="#" target="_blank">Read More</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
